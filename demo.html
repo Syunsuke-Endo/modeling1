@@ -32,7 +32,7 @@
 var sphereGeometry = new THREE.SphereGeometry( 1.0, 64,64 ); 
 //球 色、ワイヤー
 var sphereMaterial = new THREE. MeshPhongMaterial( { color: 0x0000ff, wireframe: true } );
-var torusKnot = new THREE.Mesh( torusKnotGeometry, torusKnotMaterial );
+var Sphere = new THREE.Mesh(SphereGeometry, SphereMaterial );
 sohere.position.set( 0, 0, -15 );
 scene.add( sphere );
 
@@ -53,8 +53,8 @@ scene.add( sphere );
       requestAnimationFrame(update);
   
       // 箱を回転させる
-      torusKnot.rotation.x += 0.01;
-      torusKnot.rotation.y += 0.01;
+      Sphere.rotation.x += 0.01;
+      Sphere.rotation.y += 0.01;
   
       renderer.render(scene, camera);
     };
