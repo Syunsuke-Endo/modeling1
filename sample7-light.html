@@ -28,14 +28,13 @@
     // カメラを作成
     var camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
   
-//なんかクネクネしてるやつ
-var torusKnotGeometry = new THREE.TorusKnotGeometry( 1.5, 0.3, 20, 6, 3, 2 ); 
-//全体的な大きさ、チューブの太さ、クネクネの進む方向に対して何分割するか、
-//チューブ方向に対して何分割するか、残りの二つの数字を変えるとクネクネの形が変わる
-var torusKnotMaterial = new THREE. MeshPhongMaterial( { color: 0x0000ff, wireframe: true } );
+//球 半径、縦横に何分割か
+var sphereGeometry = new THREE.SphereGeometry( 1.0, 64,64 ); 
+//球 色、ワイヤー
+var sphereMaterial = new THREE. MeshPhongMaterial( { color: 0x0000ff, wireframe: true } );
 var torusKnot = new THREE.Mesh( torusKnotGeometry, torusKnotMaterial );
-torusKnot.position.set( 0, 0, -15 );
-scene.add( torusKnot );
+sohere.position.set( 0, 0, -15 );
+scene.add( sphere );
 
 
     // 平行光源1
@@ -45,7 +44,7 @@ scene.add( torusKnot );
     scene.add(directionalLight1);
     // 平行光源2
         var directionalLight2 = new THREE.DirectionalLight(0xffffff);
-    directionalLight2.position.set(-1, 1, 1);
+    directionalLight2.position.set(0, 0, 0);
     // シーンに追加
     scene.add(directionalLight2);
   
