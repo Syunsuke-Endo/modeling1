@@ -34,9 +34,12 @@ var sphereGeometry = new THREE.SphereGeometry( 1.0, 64,64 );
 var sphereMaterial = new THREE. MeshPhongMaterial( { color: 0xff440f, wireframe: true } );
 var Sphere1 = new THREE.Mesh(sphereGeometry, sphereMaterial );
 var Sphere2 = new THREE.Mesh(sphereGeometry, sphereMaterial );
+//中心の球
 Sphere1.position.set( 0, 0, 0 );
-Sphere2.position.set( 7, 0, 7);
-scene.add( Sphere );
+//外側を回る球
+Sphere2.position.set( 7, 0, 0);
+scene.add( Sphere1 );
+scene.add( Sphere2 );
 
 
     // 平行光源1
