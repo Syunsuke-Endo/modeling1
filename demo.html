@@ -32,7 +32,7 @@
 var sphereGeometry = new THREE.SphereGeometry( 1.0, 64,64 );
 //球 色、ワイヤー
 var sphereMaterial = new THREE. MeshPhongMaterial( { color: 0x0000ff, wireframe: true } );
-var Sphere = new THREE.Mesh(SphereGeometry, SphereMaterial );
+var Sphere = new THREE.Mesh(sphereGeometry, sphereMaterial );
 sphere.position.set( 0, 0, -5 );
 scene.add( Sphere );
 
