@@ -34,10 +34,11 @@
 //球 半径、縦横に何分割か
 var sphereGeometry = new THREE.SphereGeometry( 1.0, 64,64 );
 //球 色、ワイヤー
-var sphereMaterial = new THREE. MeshPhongMaterial( { color: 0x004488, wireframe: true } );
-var sphere1 = new THREE.Mesh(sphereGeometry, sphereMaterial );
-var sphere2 = new THREE.Mesh(sphereGeometry, sphereMaterial );
-camera.lookAt(sphere1.position);
+var sphere1Material = new THREE. MeshPhongMaterial( { color: 0x004488, wireframe: true } );
+var sphere2Material = new THREE. MeshPhongMaterial( { color: 0x884400, wireframe: true } );
+var sphere1 = new THREE.Mesh(sphereGeometry, sphere1Material );
+var sphere2 = new THREE.Mesh(sphereGeometry, sphere2Material );
+camera.position.set(0,100,0);
 
 
 
