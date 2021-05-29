@@ -32,17 +32,17 @@
     
 
 //球 半径、縦横に何分割か
-var sphere1Geometry = new THREE.SphereGeometry( 5.0, 64,64 );
-var sphere2Geometry = new THREE.SphereGeometry( 2.0, 64,64 );
-var sphere3Geometry = new THREE.SphereGeometry( 1.0, 64,64 );
+var sphere1Geometry = new THREE.SphereGeometry( 50.0, 64,64 );
+var sphere2Geometry = new THREE.SphereGeometry( 3.0, 64,64 );
+var sphere3Geometry = new THREE.SphereGeometry( 9.0, 64,64 );
 //球 色、ワイヤー
-var sphere1Material = new THREE. MeshPhongMaterial( { color: 0x004488, wireframe: true } );
-var sphere2Material = new THREE. MeshPhongMaterial( { color: 0x884400, wireframe: true } );
-var sphere3Material = new THREE. MeshPhongMaterial( { color: 0x880044, wireframe: true } );
+var sphere1Material = new THREE. MeshPhongMaterial( { color: 0xff6600, wireframe: true } );
+var sphere2Material = new THREE. MeshPhongMaterial( { color: 0x87ceeb, wireframe: true } );
+var sphere3Material = new THREE. MeshPhongMaterial( { color: 0xffd700, wireframe: true } );
 var sphere1 = new THREE.Mesh(sphere1Geometry, sphere1Material );
 var sphere2 = new THREE.Mesh(sphere2Geometry, sphere2Material );
 var sphere3 = new THREE.Mesh(sphere3Geometry, sphere3Material);
-camera.position.set(0,30,35);
+camera.position.set(0,180,180);
 camera.lookAt(sphere1.position);
 
 
@@ -68,12 +68,12 @@ camera.lookAt(sphere1.position);
       sphere3.position.set( 50, 0, 0);
       //外側を回る球
      
-      sphere2.position.x= Math.cos(timer * 0.1) * 10;
+      sphere2.position.x= Math.cos(timer * 0.1) * 70;
       sphere2.position.y= 0;
-      sphere2.position.z= Math.sin(timer * 0.1) * 10;
-      sphere3.position.x= Math.cos(timer * 0.05) * 15;
+      sphere2.position.z= Math.sin(timer * 0.1) * 70;
+      sphere3.position.x= Math.cos(timer * 0.05) * 100;
       sphere3.position.y= 0;
-      sphere3.position.z= Math.sin(timer * 0.05) * 15;
+      sphere3.position.z= Math.sin(timer * 0.05) * 100;
       scene.add( sphere1 );
       scene.add( sphere2 );
       scene.add( sphere3 );
