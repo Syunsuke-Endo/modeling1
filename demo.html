@@ -31,15 +31,17 @@
 //球 半径、縦横に何分割か
 var sphereGeometry = new THREE.SphereGeometry( 1.0, 64,64 );
 //球 色、ワイヤー
-var sphereMaterial = new THREE. MeshPhongMaterial( { color: 0x0000ff, wireframe: true } );
-var Sphere = new THREE.Mesh(sphereGeometry, sphereMaterial );
-sphere.position.set( 0, 0, -5 );
+var sphereMaterial = new THREE. MeshPhongMaterial( { color: 0xff440f, wireframe: true } );
+var Sphere1 = new THREE.Mesh(sphereGeometry, sphereMaterial );
+var Sphere2 = new THREE.Mesh(sphereGeometry, sphereMaterial );
+Sphere1.position.set( 0, 0, 0 );
+Sphere2.position.set( 7, 0, 7);
 scene.add( Sphere );
 
 
     // 平行光源1
     var directionalLight1 = new THREE.DirectionalLight(0xffffff);
-    directionalLight1.position.set(1, 1, 1);
+    directionalLight1.position.set(5, 1, 1);
     // シーンに追加
     scene.add(directionalLight1);
     // 平行光源2
@@ -53,8 +55,10 @@ scene.add( Sphere );
       requestAnimationFrame(update);
 
       // 箱を回転させる
-      Sphere.rotation.x += 0.01;
-      Sphere.rotation.y += 0.01;
+      Sphere1.rotation.x += 0.01;
+      Sphere1.rotation.y += 0.01;
+      Sphere2.rotation.x += 0.01;
+      Sphere2.rotation.y += 0.01;
 
       renderer.render(scene, camera);
     };
