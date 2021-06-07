@@ -46,7 +46,7 @@ var sphere3 = new THREE.Mesh(sphere3Geometry, sphere3Material);
 //カメラの位置と向きを設定
 camera.position.set(0,180,180);
 camera.lookAt(sphere1.position);
-
+const controls = new THREE.OrbitControls(camera,document.body);
 
 
     // 平行光源1
